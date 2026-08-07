@@ -1,0 +1,164 @@
+appId: com.taskmanager.app
+---
+# Verifica las validaciones de formato del flujo de soporte técnico.
+# Se llenan los campos editables con datos inválidos y se confirma: la app debe
+# señalar cada campo incorrecto y no crear la solicitud.
+
+# 1. Abrir la app y entrar al flujo de soporte técnico
+- launchApp:
+    clearState: true
+- assertVisible: "Task Manager"
+- tapOn: "Flujo de Soporte Técnico"
+- assertVisible: "Crear Solicitud de Soporte Técnico"
+
+# 2. Información del solicitante con datos inválidos
+- tapOn:
+    id: "input-nombre-completo"
+- inputText: "Laura123"
+- tapOn:
+    id: "input-celular"
+- inputText: "300ABC0000"
+- tapOn:
+    id: "input-area"
+- inputText: "Área 51"
+
+# 3. Solicitud: descripción demasiado corta
+- scrollUntilVisible:
+    element:
+      text: "Error de la aplicación"
+    direction: DOWN
+    centerElement: true
+- tapOn: "Error de la aplicación"
+- scrollUntilVisible:
+    element:
+      id: "input-descripcion"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-descripcion"
+- inputText: "corta"
+
+# 4. Prioridad y fecha máxima con formato inválido
+- scrollUntilVisible:
+    element:
+      text: "Alta"
+    direction: DOWN
+    centerElement: true
+- tapOn: "Alta"
+- scrollUntilVisible:
+    element:
+      id: "input-fecha-maxima"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-fecha-maxima"
+- inputText: "20261340"
+- hideKeyboard
+
+# 5. Confirmar: debe rechazar por formato
+- scrollUntilVisible:
+    element:
+      id: "btn-crear-soporte"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "btn-crear-soporte"
+- assertNotVisible: "Solicitud de soporte técnico creada exitosamente"
+
+# 6. Cada campo inválido muestra su mensaje
+- scrollUntilVisible:
+    element:
+      text: "El nombre completo solo permite letras"
+    direction: UP
+    centerElement: true
+- assertVisible: "El nombre completo solo permite letras"
+- assertVisible: "El celular solo permite números"
+- assertVisible: "El área solo permite letras"
+- scrollUntilVisible:
+    element:
+      text: "La descripción debe tener al menos 10 caracteres"
+    direction: DOWN
+    centerElement: true
+- assertVisible: "La descripción debe tener al menos 10 caracteres"
+- scrollUntilVisible:
+    element:
+      text: "Ingresa una fecha válida con formato YYYY-MM-DD"
+    direction: DOWN
+    centerElement: true
+- assertVisible: "Ingresa una fecha válida con formato YYYY-MM-DD"
+
+# 7. Corregir los campos inválidos
+- scrollUntilVisible:
+    element:
+      id: "input-nombre-completo"
+    direction: UP
+    centerElement: true
+- tapOn:
+    id: "input-nombre-completo"
+- eraseText
+- inputText: "Laura Gómez"
+- tapOn:
+    id: "input-celular"
+- eraseText
+- inputText: "3001234567"
+- tapOn:
+    id: "input-area"
+- eraseText
+- inputText: "Tecnología"
+- scrollUntilVisible:
+    element:
+      id: "input-descripcion"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-descripcion"
+- eraseText
+- inputText: "La aplicación falla al iniciar sesión"
+- scrollUntilVisible:
+    element:
+      id: "input-fecha-maxima"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-fecha-maxima"
+- eraseText
+- inputText: "2026-08-20"
+- hideKeyboard
+
+# 8. Ahora sí debe pasar y ningún mensaje debe quedar visible
+- scrollUntilVisible:
+    element:
+      id: "btn-crear-soporte"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "btn-crear-soporte"
+- assertVisible: "Solicitud de soporte técnico creada exitosamente"
+- scrollUntilVisible:
+    element:
+      text: "Laura Gómez"
+    direction: DOWN
+    centerElement: true
+- assertVisible: "Laura Gómez"
+- assertVisible: "1 solicitud registrada"
+- assertVisible: "Abierta"
+- scrollUntilVisible:
+    element:
+      id: "input-nombre-completo"
+    direction: UP
+    centerElement: true
+- assertNotVisible: "El nombre completo solo permite letras"
+- assertNotVisible: "El celular solo permite números"
+- assertNotVisible: "El área solo permite letras"
+- scrollUntilVisible:
+    element:
+      id: "input-descripcion"
+    direction: DOWN
+    centerElement: true
+- assertNotVisible: "La descripción debe tener al menos 10 caracteres"
+- scrollUntilVisible:
+    element:
+      id: "input-fecha-maxima"
+    direction: DOWN
+    centerElement: true
+- assertNotVisible: "Ingresa una fecha válida con formato YYYY-MM-DD"

@@ -4,6 +4,9 @@ import { Modal, View, Text, Pressable } from 'react-native';
 interface ConfirmDeleteDialogProps {
   visible: boolean;
   taskTitle?: string;
+  title?: string;
+  message?: string;
+  confirmLabel?: string;
   onConfirm: () => void;
   onCancel: () => void;
 }
@@ -11,18 +14,22 @@ interface ConfirmDeleteDialogProps {
 export function ConfirmDeleteDialog({
   visible,
   taskTitle,
+  title = 'Eliminar tarea',
+  message,
+  confirmLabel = 'Eliminar',
   onConfirm,
   onCancel,
 }: ConfirmDeleteDialogProps) {
+  const description =
+    message ??
+    `¿Seguro que quieres eliminar ${taskTitle ? `"${taskTitle}"` : 'esta tarea'}? Esta acción no se puede deshacer.`;
+
   return (
     <Modal visible={visible} transparent animationType="fade" onRequestClose={onCancel}>
       <View className="flex-1 items-center justify-center bg-black/40 p-6">
         <View className="w-full max-w-sm rounded-xl bg-white p-5">
-          <Text className="text-lg font-bold text-gray-900">Eliminar tarea</Text>
-          <Text className="mt-2 text-sm text-gray-600">
-            ¿Seguro que quieres eliminar {taskTitle ? `"${taskTitle}"` : 'esta tarea'}? Esta acción no
-            se puede deshacer.
-          </Text>
+          <Text className="text-lg font-bold text-gray-900">{title}</Text>
+          <Text className="mt-2 text-sm text-gray-600">{description}</Text>
           <View className="mt-5 flex-row justify-end gap-3">
             <Pressable
               onPress={onCancel}
@@ -38,7 +45,7 @@ export function ConfirmDeleteDialog({
               accessibilityLabel="Confirmar eliminación"
               className="rounded-lg bg-red-600 px-4 py-2 active:bg-red-700"
             >
-              <Text className="text-base font-semibold text-white">Eliminar</Text>
+              <Text className="text-base font-semibold text-white">{confirmLabel}</Text>
             </Pressable>
           </View>
         </View>

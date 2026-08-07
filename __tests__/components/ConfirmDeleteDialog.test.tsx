@@ -36,4 +36,22 @@ describe('ConfirmDeleteDialog', () => {
     await fireEvent.press(screen.getByLabelText('Cancelar'));
     expect(onCancel).toHaveBeenCalledTimes(1);
   });
+
+  it('permite personalizar el título y el mensaje del diálogo', async () => {
+    await render(
+      <ConfirmDeleteDialog
+        visible
+        title="Eliminar solicitud"
+        message='¿Seguro que quieres eliminar "Juan Pérez"? Esta acción no se puede deshacer.'
+        onConfirm={noop}
+        onCancel={noop}
+      />
+    );
+    expect(screen.getByText('Eliminar solicitud')).toBeTruthy();
+    expect(
+      screen.getByText(
+        '¿Seguro que quieres eliminar "Juan Pérez"? Esta acción no se puede deshacer.'
+      )
+    ).toBeTruthy();
+  });
 });

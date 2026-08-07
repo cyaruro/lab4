@@ -1,0 +1,77 @@
+appId: com.taskmanager.app
+---
+# 1. Abrir la app limpia y entrar al flujo de soporte técnico
+- launchApp:
+    clearState: true
+- assertVisible: "Task Manager"
+- tapOn: "Flujo de Soporte Técnico"
+- assertVisible: "Crear Solicitud de Soporte Técnico"
+
+# 2. Crear una solicitud para dejar un registro eliminable
+- tapOn:
+    id: "input-nombre-completo"
+- inputText: "Mario Ruiz"
+- tapOn:
+    id: "input-celular"
+- inputText: "3015557788"
+- tapOn:
+    id: "input-area"
+- inputText: "Operaciones"
+- scrollUntilVisible:
+    element:
+      text: "Problema de red"
+    direction: DOWN
+    centerElement: true
+- tapOn: "Problema de red"
+- scrollUntilVisible:
+    element:
+      id: "input-descripcion"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-descripcion"
+- inputText: "No hay conexión en el área de trabajo"
+- scrollUntilVisible:
+    element:
+      text: "Media"
+    direction: DOWN
+    centerElement: true
+- tapOn: "Media"
+- scrollUntilVisible:
+    element:
+      id: "input-fecha-maxima"
+    direction: DOWN
+    centerElement: true
+- tapOn:
+    id: "input-fecha-maxima"
+- inputText: "2026-08-22"
+- hideKeyboard
+
+- scrollUntilVisible:
+   element:
+     id: "btn-crear-soporte"
+   direction: DOWN
+   centerElement: true
+- tapOn:
+   id: "btn-crear-soporte"
+- scrollUntilVisible:
+   element:
+     text: "Solicitud de soporte técnico creada exitosamente"
+   direction: DOWN
+   centerElement: true
+- assertVisible: "Solicitud de soporte técnico creada exitosamente"
+
+# 3. Eliminar la solicitud creada y confirmar que desaparece
+- scrollUntilVisible:
+    element:
+      text: "Mario Ruiz"
+    direction: DOWN
+    centerElement: true
+- assertVisible: "1 solicitud registrada"
+- tapOn: "Eliminar solicitud de soporte de Mario Ruiz"
+- assertVisible: "Eliminar solicitud"
+- assertVisible: "¿Seguro que quieres eliminar \"Mario Ruiz\"? Esta acción no se puede deshacer."
+- tapOn: "Confirmar eliminación"
+- assertVisible: "No hay solicitudes de soporte técnico"
+- assertVisible: "0 solicitudes registradas"
+- assertNotVisible: "Mario Ruiz"

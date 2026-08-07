@@ -16,6 +16,12 @@ const ACCESOS: { href: string; titulo: string; descripcion: string; className: s
     descripcion: 'Datos de usuario, envío y pago',
     className: 'bg-emerald-600 active:bg-emerald-700',
   },
+  {
+    href: '/support',
+    titulo: 'Flujo de Soporte Técnico',
+    descripcion: 'Crear y consultar solicitudes de soporte técnico',
+    className: 'bg-violet-600 active:bg-violet-700',
+  },
 ];
 
 export function HomeScreen() {
