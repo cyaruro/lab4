@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>12/14</span>
             </div>
         
             
@@ -157,7 +157,32 @@
 <a name='L92'></a><a href='#L92'>92</a>
 <a name='L93'></a><a href='#L93'>93</a>
 <a name='L94'></a><a href='#L94'>94</a>
-<a name='L95'></a><a href='#L95'>95</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -194,6 +219,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -251,8 +282,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react';
-import { ScrollView, View, Text, Pressable, InputAccessoryView, Keyboard, Platform } from 'react-native';
+import {
+  ScrollView,
+  View,
+  Text,
+  Pressable,
+  InputAccessoryView,
+  Keyboard,
+  Platform,
+  KeyboardAvoidingView,
+} from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { UserInfoSection, UserInfo } from '../components/UserInfoSection';
 import { ShippingInfoSection, ShippingInfo } from '../components/ShippingInfoSection';
@@ -289,59 +330,66 @@ export function CheckoutScreen() {
 &nbsp;
   return (
     &lt;&gt;
-    &lt;ScrollView
-      className="flex-1 bg-gray-50"
-      contentContainerClassName="gap-5 p-4"
-      contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}
-      keyboardShouldPersistTaps="handled"
-      automaticallyAdjustKeyboardInsets
-    &gt;
-      &lt;UserInfoSection
-        values={user}
-        errors={errors}
-        onChange={(f, v) =&gt; setUser((s) =&gt; ({ ...s, [f]: v }))}
-      /&gt;
-      &lt;ShippingInfoSection
-        values={shipping}
-        errors={errors}
-        onChange={(f, v) =&gt; setShipping((s) =&gt; ({ ...s, [f]: v }))}
-      /&gt;
-      &lt;PaymentInfoSection
-        values={payment}
-        errors={errors}
-        onChange={(f, v) =&gt; setPayment((s) =&gt; ({ ...s, [f]: v }))}
-      /&gt;
-&nbsp;
-      {status === 'error' &amp;&amp; (
-        &lt;Text className="rounded-lg bg-red-100 px-4 py-3 text-sm font-medium text-red-800"&gt;
-          Completa todos los campos antes de continuar
-        &lt;/Text&gt;
-      )}
-      {status === 'success' &amp;&amp; (
-        &lt;Text className="rounded-lg bg-green-100 px-4 py-3 text-sm font-medium text-green-800"&gt;
-          Transacción completada exitosamente
-        &lt;/Text&gt;
-      )}
-&nbsp;
-      &lt;Pressable
-        onPress={submit}
-        accessibilityRole="button"
-        className="rounded-lg bg-emerald-600 py-3 active:bg-emerald-700"
+      &lt;KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === 'ios' ? 'padding' : <span class="branch-1 cbranch-no" title="branch not covered" >'height'}</span>
+        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : <span class="branch-1 cbranch-no" title="branch not covered" >24}</span>
       &gt;
-        &lt;Text className="text-center text-base font-semibold text-white"&gt;Confirmar pago&lt;/Text&gt;
-      &lt;/Pressable&gt;
+        &lt;ScrollView
+          className="flex-1 bg-gray-50"
+          contentContainerClassName="gap-5 p-4"
+          contentContainerStyle={{ paddingBottom: insets.bottom + 120 }}
+          keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
+          automaticallyAdjustKeyboardInsets={Platform.OS === 'ios'}
+        &gt;
+          &lt;UserInfoSection
+            values={user}
+            errors={errors}
+            onChange={(f, v) =&gt; setUser((s) =&gt; ({ ...s, [f]: v }))}
+          /&gt;
+          &lt;ShippingInfoSection
+            values={shipping}
+            errors={errors}
+            onChange={(f, v) =&gt; setShipping((s) =&gt; ({ ...s, [f]: v }))}
+          /&gt;
+          &lt;PaymentInfoSection
+            values={payment}
+            errors={errors}
+            onChange={(f, v) =&gt; setPayment((s) =&gt; ({ ...s, [f]: v }))}
+          /&gt;
 &nbsp;
-      &lt;View className="h-2" /&gt;
-    &lt;/ScrollView&gt;
-    {Platform.OS === 'ios' &amp;&amp; (
-      &lt;InputAccessoryView nativeID={KEYBOARD_ACCESSORY_ID}&gt;
-        &lt;View className="flex-row justify-end border-t border-gray-200 bg-gray-100 px-4 py-2"&gt;
-          &lt;Pressable onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >Keyboard.dismiss()}</span> accessibilityRole="button"&gt;
-            &lt;Text className="text-base font-semibold text-blue-600"&gt;Listo&lt;/Text&gt;
+          {status === 'error' &amp;&amp; (
+            &lt;Text className="rounded-lg bg-red-100 px-4 py-3 text-sm font-medium text-red-800"&gt;
+              Completa todos los campos antes de continuar
+            &lt;/Text&gt;
+          )}
+          {status === 'success' &amp;&amp; (
+            &lt;Text className="rounded-lg bg-green-100 px-4 py-3 text-sm font-medium text-green-800"&gt;
+              Transacción completada exitosamente
+            &lt;/Text&gt;
+          )}
+&nbsp;
+          &lt;Pressable
+            onPress={submit}
+            accessibilityRole="button"
+            className="rounded-lg bg-emerald-600 py-3 active:bg-emerald-700"
+          &gt;
+            &lt;Text className="text-center text-base font-semibold text-white"&gt;Confirmar pago&lt;/Text&gt;
           &lt;/Pressable&gt;
-        &lt;/View&gt;
-      &lt;/InputAccessoryView&gt;
-    )}
+&nbsp;
+          &lt;View className="h-2" /&gt;
+        &lt;/ScrollView&gt;
+        {Platform.OS === 'ios' &amp;&amp; (
+          &lt;InputAccessoryView nativeID={KEYBOARD_ACCESSORY_ID}&gt;
+            &lt;View className="flex-row justify-end border-t border-gray-200 bg-gray-100 px-4 py-2"&gt;
+              &lt;Pressable onPress={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >Keyboard.dismiss()}</span> accessibilityRole="button"&gt;
+                &lt;Text className="text-base font-semibold text-blue-600"&gt;Listo&lt;/Text&gt;
+              &lt;/Pressable&gt;
+            &lt;/View&gt;
+          &lt;/InputAccessoryView&gt;
+        )}
+      &lt;/KeyboardAvoidingView&gt;
     &lt;/&gt;
   );
 }
@@ -352,7 +400,7 @@ export function CheckoutScreen() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-08-01T16:13:03.284Z
+                at 2026-08-12T03:40:29.375Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

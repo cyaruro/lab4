@@ -1,28 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83a4ff8d-175d-45d4-ba32-7d0fc5f12113" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/__tests__/components/ConfirmDeleteDialog.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/components/ConfirmDeleteDialog.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.setup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/block-navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/block-navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/prettify.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/prettify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/sorter.js" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/sorter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/ConfirmDeleteDialog.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/ConfirmDeleteDialog.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/LabeledInput.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/LabeledInput.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/PaymentInfoSection.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/PaymentInfoSection.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/ShippingInfoSection.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/ShippingInfoSection.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/StatusBadge.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/StatusBadge.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/TaskCard.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/TaskCard.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/TaskForm.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/TaskForm.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/TaskList.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/TaskList.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/UserInfoSection.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/UserInfoSection.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/components/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/components/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/hooks/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/hooks/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/hooks/useCounter.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/hooks/useCounter.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/hooks/useCreateTask.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/hooks/useCreateTask.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/hooks/useTaskList.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/hooks/useTaskList.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/schemas/checkoutSchema.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/schemas/checkoutSchema.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/schemas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/schemas/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/schemas/taskSchema.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/schemas/taskSchema.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/screens/CheckoutScreen.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/screens/CheckoutScreen.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/screens/CreateTaskScreen.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/screens/CreateTaskScreen.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/screens/HomeScreen.tsx.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/screens/HomeScreen.tsx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/screens/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/screens/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/services/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/services/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/services/taskService.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/services/taskService.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/types.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/types.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/utils/filterTasks.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/utils/filterTasks.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/utils/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/utils/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/utils/validateTask.ts.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/utils/validateTask.ts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmDeleteDialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmDeleteDialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mocks/handlers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/mocks/handlers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/CheckoutScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/CheckoutScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/HomeScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/HomeScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
   <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="1370" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -67,7 +101,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/cristiandGutierrezb/task-manager-testing-lab.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/cyaruro/Test_lab.git&quot;,
     &quot;accountId&quot;: &quot;4c1457bc-4cdf-4c84-9c7d-c3ae403232bc&quot;
   }
 }</component>
@@ -77,23 +111,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.5233241335764138" />
-      <entry key="MS500" value="3.1111412277434205" />
-      <entry key="S2" value="6.471299356308832" />
-      <entry key="S5" value="7.888080886223555" />
-      <entry key="S10" value="9.423842324899098" />
-      <entry key="S30" value="20.38099747906748" />
-      <entry key="S60" value="35.089250201113984" />
-      <entry key="M2" value="56.40506421599379" />
-      <entry key="M5" value="95.21737858710662" />
-      <entry key="M10" value="133.74626695363116" />
-      <entry key="M15" value="184.2633350454695" />
-      <entry key="M30" value="471.8594522196563" />
-      <entry key="H1" value="1196.4409058492631" />
-      <entry key="H2" value="2203.6324443165768" />
-      <entry key="H4" value="3111.1697256076804" />
-      <entry key="D1" value="4237.001945310985" />
-      <entry key="W1" value="4476.51588095633" />
+      <entry key="MS100" value="1.0000000230519306" />
+      <entry key="MS500" value="1.115667573894738" />
+      <entry key="S2" value="3.915260556521365" />
+      <entry key="S5" value="6.718292521168552" />
+      <entry key="S10" value="8.653651330327971" />
+      <entry key="S30" value="24.325914656172458" />
+      <entry key="S60" value="52.47789183192547" />
+      <entry key="M2" value="88.14030536803777" />
+      <entry key="M5" value="132.2337772562679" />
+      <entry key="M10" value="176.61477049088253" />
+      <entry key="M15" value="211.0859377028726" />
+      <entry key="M30" value="283.667350218683" />
+      <entry key="H1" value="466.6601150609286" />
+      <entry key="H2" value="1099.618721301353" />
+      <entry key="H4" value="2186.1687035479863" />
+      <entry key="D1" value="4309.085350840619" />
+      <entry key="W1" value="4877.3303004304635" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -115,23 +149,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.4480608402879505" />
-      <entry key="MS500" value="3.0820335664917873" />
-      <entry key="S2" value="6.456688278641817" />
-      <entry key="S5" value="7.881002636557476" />
-      <entry key="S10" value="9.419608359145037" />
-      <entry key="S30" value="20.377898164475774" />
-      <entry key="S60" value="35.0865087760404" />
-      <entry key="M2" value="56.40270636458062" />
-      <entry key="M5" value="95.21543940391862" />
-      <entry key="M10" value="133.74472862670325" />
-      <entry key="M15" value="184.2619569166661" />
-      <entry key="M30" value="471.85794645118494" />
-      <entry key="H1" value="1196.4390696275275" />
-      <entry key="H2" value="2203.630693562526" />
-      <entry key="H4" value="3111.16844532771" />
-      <entry key="D1" value="4237.001643160402" />
-      <entry key="W1" value="4476.515835006126" />
+      <entry key="MS100" value="0.9659363512346187" />
+      <entry key="MS500" value="1.1072538377751024" />
+      <entry key="S2" value="3.90295975560495" />
+      <entry key="S5" value="6.7092407369323315" />
+      <entry key="S10" value="8.647552058050715" />
+      <entry key="S30" value="24.319824430892055" />
+      <entry key="S60" value="52.47191398704491" />
+      <entry key="M2" value="88.13568566623893" />
+      <entry key="M5" value="132.23116627485035" />
+      <entry key="M10" value="176.61296748904078" />
+      <entry key="M15" value="211.08438803922144" />
+      <entry key="M30" value="283.66613906701446" />
+      <entry key="H1" value="466.65910175700674" />
+      <entry key="H2" value="1099.61765823704" />
+      <entry key="H4" value="2186.1676990000806" />
+      <entry key="D1" value="4309.085024714275" />
+      <entry key="W1" value="4877.33024764376" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -148,8 +182,13 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feature/transactional-flow&quot;,
@@ -165,7 +204,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMThirdPartyAiProvidersConfigurable&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.33975086&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\LENOVO\\AppData\\Roaming\\JetBrains\\IntelliJIdea2026.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;
+    &quot;ts.external.directory.path&quot;: &quot;D:\\test\\lab\\node_modules\\typescript\\lib&quot;
   }
 }</component>
   <component name="RunManager">

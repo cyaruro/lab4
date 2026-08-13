@@ -2,13 +2,22 @@ name: Test Suite
 
 on:
   push:
-    branches: [main, develop]
+    branches: ['feature/transactional-flow']
   pull_request:
-    branches: [main]
+    branches: ['feature/transactional-flow']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      CI: true
 
     steps:
       - name: Checkout del código
@@ -27,4 +36,12 @@ jobs:
         run: npx tsc --noEmit
 
       - name: Ejecutar pruebas con cobertura
-        run: npx jest --coverage --ci
+        run: npm run test:ci
+
+      - name: Publicar artefacto de cobertura
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
+          if-no-files-found: error
